@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <title>Electron Intro from Traversy Media</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sys Info</h1>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        console.log(process);
+        output.innerHTML = `
+        <h2>Hello, ${process.env.USERNAME}</h2>
+            <ul class="list-group">
+                <li class="list-group-item">You are using ${process.platform} platform with ${process.arch} architecture</li>
+                <li class="list-group-item">Your computer's processor has: ${process.env.NUMBER_OF_PROCESSORS} processors</li>
+                <li class="list-group-item">Your node version: ${process.versions.node}</li>
+                <li class="list-group-item">Your electron version: ${process.versions.electron}</li>
+                <li class="list-group-item">Your chrome version: ${process.versions.chrome}</li>
+            </ul>
+        `
+    </script>
+
+    <script>
+        require('./renderer.js');
+    </script>
+</body>
+</html>
