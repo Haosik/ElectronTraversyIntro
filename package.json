@@ -4,10 +4,10 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "electron": "^1.6.7"
+    "electron": "^9.1.0"
   },
   "devDependencies": {
-    "electron": "^1.6.7"
+    "electron": "^9.1.0"
   },
   "scripts": {
     "start": "electron ."
